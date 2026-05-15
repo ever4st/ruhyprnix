@@ -35,7 +35,7 @@
   users.users.ever4pain = {
     isNormalUser = true;
     initialPassword = "qwerty"; # Смени его сразу после входа командой passwd
-    extraGroups = [ "wheel" "networkmanager" "video" "audio" ];
+    extraGroups = [ "wheel" "networkmanager" "video" "audio" "docker"];
     shell = pkgs.zsh; 
   };
 
@@ -44,11 +44,14 @@
     enable = true; 
     hostname = "nixos-ever"; 
     timezone = "Europe/Moscow"; # Твой часовой пояс
-    locale = "ru_RU.UTF-8";
+    locale = "en_CA.UTF-8";
   };
 
   # Включаем экспериментальные фичи для работы Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  virtualization.docker.enable = true;
+  virtualization.podman.enable = true;
 
   system.stateVersion = "25.05";
 }
