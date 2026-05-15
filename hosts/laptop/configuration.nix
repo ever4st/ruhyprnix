@@ -53,5 +53,8 @@
   virtualization.docker.enable = true;
   virtualization.podman.enable = true;
 
+  nixpkgs.config.allowUnmarkedBroken = true;
+  nixpkgs.config.allowUnfree = true;
+
   system.stateVersion = "25.05";
 }
