@@ -5,12 +5,9 @@
 }:
 {
   imports = [
-    # Модули HydeNix
-    inputs.hydenix.inputs.home-manager.nixosModules.home-manager
-    inputs.hydenix.nixosModules.default
     
     # Твои кастомные модули (подключаем папку или конкретные файлы)
-    ./modules/system 
+    ../../modules/system 
     ./hardware-configuration.nix
 
     # Аппаратная часть для AMD
@@ -25,8 +22,7 @@
     extraSpecialArgs = { inherit inputs; };
     users."ever4pain" = { ... }: {
       imports = [
-        inputs.hydenix.homeModules.default
-        ./modules/home-manager # Здесь будут лежать настройки Kitty, Neovim, Dracula
+        ../../modules/home-manager # Здесь будут лежать настройки Kitty, Neovim, Dracula
       ];
     };
   };
@@ -50,8 +46,8 @@
   # Включаем экспериментальные фичи для работы Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  virtualization.docker.enable = true;
-  virtualization.podman.enable = true;
+  virtualisation.docker.enable = true;
+  virtualisation.podman.enable = true;
 
   nixpkgs.config.allowUnmarkedBroken = true;
   nixpkgs.config.allowUnfree = true;
