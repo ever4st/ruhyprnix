@@ -7,7 +7,11 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     
     # Подключаем базу HydeNix для визуала
-    hyprland.url = "github:hyprwm/Hyprland";
+    hydenix.url = "github:richen604/hydenix";
+    
+    # Полезные модули для железа
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
@@ -20,7 +24,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.ever4pain = import ./modules/home/home.nix;
+          home-manager.users.ever4pain = import ./modules/home-manager/default.nix;
         }
       ];
     };
