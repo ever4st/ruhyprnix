@@ -10,7 +10,6 @@
     gnumake
     cmake
     gdb
-    rustup
     wget
   ];
 
