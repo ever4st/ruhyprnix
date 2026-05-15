@@ -29,6 +29,11 @@
       name = "JetBrainsMono Nerd Font";
       size = 11;
     };
+
+    # Это заставит GTK 4 приложения тоже использовать темную тему
+    gtk3.extraConfig.gtk-application-prefer-dark-theme = 1;
+    gtk4.extraConfig.gtk-application-prefer-dark-theme = 1;
+
   };
 
   # Чтобы Qt приложения выглядели как GTK (Dracula)
@@ -40,5 +45,6 @@
   home.sessionVariables = {
     XCURSOR_SIZE = "24";
     HYPRCURSOR_SIZE = "24";
+    GTK_THEME = "Dracula";
   };
 }
