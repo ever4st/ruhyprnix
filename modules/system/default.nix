@@ -10,7 +10,7 @@
     ./sddm.nix
     ./system.nix
     ./amnezia.nix  # Твой VPN
-    ./db.nix       # Базы данных (Postgres/Sqlite)
+    ./database.nix # Базы данных (Postgres/Sqlite)
     # Добавляй сюда новые файлы по мере создания
   ];
 }
