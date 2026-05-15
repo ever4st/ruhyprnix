@@ -26,7 +26,7 @@
     users."ever4pain" = { ... }: {
       imports = [
         inputs.hydenix.homeModules.default
-        ./modules/hm # Здесь будут лежать настройки Kitty, Neovim, Dracula
+        ./modules/home-manager # Здесь будут лежать настройки Kitty, Neovim, Dracula
       ];
     };
   };
