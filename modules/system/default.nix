@@ -3,14 +3,15 @@
 {
   imports = [
     ./audio.nix
-    ./boot.nix
     ./hardware.nix
     ./network.nix
-    ./nix.nix
     ./sddm.nix
-    ./system.nix
     ./amnezia.nix  # Твой VPN
     ./database.nix # Базы данных (Postgres/Sqlite)
     # Добавляй сюда новые файлы по мере создания
+
+    #./boot.nix
+    #./nix.nix
+    #./system.nix
   ];
 }
