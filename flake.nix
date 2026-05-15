@@ -1,5 +1,5 @@
 {
-  description = "Мой флейк nix os на русском";
+  description = "My minimal Nix Os flake (visual only)";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -11,7 +11,7 @@
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
-    nixosConfigurations.my-laptop = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.no4einb = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
